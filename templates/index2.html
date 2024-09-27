@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change - Part 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV BARRRR -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Intro Section -->
+    <div class="intro fade-in">
+        <div class="intro-content">
+            <h1>Climate Change, Let’s Dive Deeper!</h1>
+            <div class="intro-images">
+                <img src="{{ url_for('static', filename='images/wow.jpeg') }}" alt="Left Image">
+                <p>Halo lagiii! jadi di bagian ini, aku akan membahas lebih dalam tentang solusi yang bisa kita ambil untuk mengatasi perubahan iklim! Salah satu langkah yang bisa kita lakukan adalah dengan lebih banyak menggunakan energi terbarukan seperti tenaga surya dan angin. Ini adalah cara yang lebih bersih dan ramah lingkungan dibandingkan dengan bahan bakar fosil.</p>
+            </div>
+            <p>Kita juga bisa berkontribusi dengan mengurangi limbah dan menggunakan produk yang lebih ramah lingkungan. Setiap tindakan kecil yang kita lakukan bisa berkontribusi untuk perubahan besar. Jadi, ayo mulai dari diri kita sendiri dan ajak orang-orang di sekitar kita untuk ikut serta!</p>
+            <h3>Kita bisa melakukannya bersama!</h3>
+            <a href="{{ url_for('quiz') }}" class="quiz-link">Take the Quiz</a> <!-- Quiz link -->
+
+            <!-- About This Website Link -->
+            <a href="{{ url_for('about') }}" class="about-link">About This Website</a> <!-- Link to the about page -->
+        </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about fade-in"> <!-- Add the fade-in class for animation -->
+        <h1>About This Website</h1>
+        <p>This website is dedicated to educating users about climate change and its impact on the world. The information and quizzes provided aim to raise awareness and encourage actionable knowledge on how to combat climate change.</p>
+        
+        <!-- Fading in Image -->
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/nice.jpg') }}" alt="About Image">
+        </div>
+    </div>
+
+</body>
+</html>

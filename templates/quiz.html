@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- # page adjusts to different screen sizes -->
+    <title>Climate Change Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- # Links to external CSS file for styling the page -->
+</head>
+<body>
+
+    <!-- NAV BARRRR -->
+    <nav class="navbar"> 
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li> <!-- # Navigation link to home page -->
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Quiz Section -->
+    <div class="quiz fade-in"> 
+        <h2>Take the Quiz!</h2>
+        <form action="/submit" method="POST"> <!-- # Form to submit answers using the POST method -->
+            {% for question in questions %} <!-- # Flask loop to iterate over 'questions' -->
+            <div class="question-block"> 
+                <p class="question-text"><strong>{{ question['question'] }}</strong></p> 
+                <div class="options"> 
+                    {% for choice in question['choices'] %} <!-- # Flask loop to iterate over each choice for the current question -->
+                        <label class="option-label"> <!-- # Label for the radio button, making it clickable -->
+                            <input type="radio" name="{{ question['question'] }}" value="{{ choice }}" required> <!-- # Radio button input -->
+                            {{ choice }} 
+                        </label><br>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            <button type="submit" class="quiz-submit">Submit Quiz</button> <!-- # Submit button -->
+            <div>
+                <!-- About This Website Link -->
+                <a href="{{ url_for('about') }}" class="about-link">About This Website</a> <!-- Link to the about page -->
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

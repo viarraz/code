@@ -1,0 +1,230 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Uniform font for all elements */
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #557C56;
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal; /* Ensure consistent font weight */
+    font-size: 1.6em; /* Ensure consistent font size */
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro-content h1 {
+    font-size: 2.5em;
+    color: #33372C;
+    margin-bottom: 16px;
+}
+
+.intro-content h4 {
+    font-size: 1.4em; /* Adjusted for better readability */
+}
+
+.intro-images {
+    display: flex;
+    justify-content: flex-start; /* Align images to the left */
+    align-items: center; /* Center images vertically */
+    margin: 16px 0;
+}
+
+.intro-images img {
+    width: 30%; /* Adjusted width to fit smaller images */
+    height: auto; /* Allow height to adjust automatically */
+    border-radius: 5px;
+    margin-right: 20px; /* Space between the image and text */
+}
+
+.intro-content p {
+    text-align: justify;
+    font-size: 1.1em; /* Adjusted for better readability */
+}
+
+/* Animation for the Quiz Link */
+@keyframes quizLinkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Quiz Link Styling */
+.quiz-link {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #FF885B;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: quizLinkFadeIn 1s ease-in-out; /* Apply animation */
+}
+
+.quiz-link:hover {
+    background-color: #557C56;
+}
+
+/* Results Section Styling */
+.results {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Animation for results */
+}
+
+.results h2 {
+    text-align: center;
+    color: #557C56;
+}
+
+.results p {
+    text-align: center; /* Centered text */
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Quiz Page Styling */
+.quiz {
+    text-align: left; /* Center text */
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Apply fade-in animation */
+}
+
+.quiz h2 {
+    color: #557C56;
+    margin-bottom: 20px;
+}
+
+.quiz form {
+    margin-top: 20px;
+}
+
+.quiz .question-block {
+    margin: 20px 0;
+}
+
+.quiz .options {
+    text-align: left; /* Align choices to the left */
+    margin-left: 20px; /* Indent options */
+}
+
+.quiz .options input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and text */
+}
+
+.quiz-submit {
+    padding: 10px 20px;
+    background-color: #FF885B;
+    color: rgb(20, 66, 35);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.quiz-submit:hover {
+    background-color: #557C56;
+}
+
+/* Optional image link below the quiz */
+.image-link {
+    margin-top: 20px;
+}
+
+.image-link img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.about-image {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
